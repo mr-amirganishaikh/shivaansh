@@ -1,0 +1,318 @@
+/* All common stylesheet codes should come here */
+
+@import "global";
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 9999;
+    @include transition(all 0.3s);
+    .navbar-main {
+        .navbar-header {}
+        .navbar-collapse {
+            padding: 0px;
+            .navbar-nav {
+                width: 100%;
+                text-align: center;
+                li {
+                    float: none;
+                    display: inline-block;
+                    width: 19%;
+                    a {
+                        text-transform: uppercase;
+                        color: $color-white;
+                        &:hover,
+                        &:focus {
+                            background: transparent;
+                        }
+                        &.logo {
+                            img {
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    .color-highlight {
+        color: $color-yellow;
+    }
+    .section-after {
+        overflow: hidden;
+        padding-bottom: 100px !important;
+        &:after {
+            content: '';
+            height: 100px;
+            width: 100px;
+            @include border-radius(100%);
+            position: absolute;
+            bottom: -50px;
+            left: 48%;
+        }
+        &#about-us:after {
+            background: #C1C1C1;
+        }
+        &#services:after {
+            background: $color-base;
+        }
+    }
+    .section-title {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-family: $montserrat;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        span {
+            color: $color-yellow;
+        }
+    }
+    .profile {
+        position: relative;
+        top: -65px;
+        img {
+            width: 100px;
+            height: 100px;
+            @include border-radius(100%);
+        }
+        .profile-title {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-family: $montserrat;
+            font-weight: 700;
+            letter-spacing: 1px;
+            span {
+                color: $color-yellow;
+            }
+        }
+        &.main {
+            img {
+                width: 120px;
+                height: 120px;
+                padding: 2px;
+                border: 2px solid $color-yellow;
+            }
+        }
+    }
+    #hero-section {
+        background-image: url(../img/1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: $color-white;
+        .layer {
+            width: 100%;
+            height: 100%;
+            background: rgba($color-base, 0.8);
+            padding-bottom: 50px;
+        }
+        .profile-brief {
+            margin-bottom: 30px;
+            p {
+                font-family: $raleway;
+                font-weight: normal;
+                margin-bottom: 0px;
+            }
+            h3 {
+                margin-top: 0px;
+                font-family: $raleway;
+                font-size: 1.1rem;
+                font-weight: normal;
+            }
+            ul {
+                li {
+                    text-transform: uppercase;
+                    font-family: $raleway;
+                    font-weight: 900;
+                    letter-spacing: 1px;
+                    span {
+                        display: inline-block;
+                        padding: 0px 3px;
+                        margin-right: 2px;
+                    }
+                    &:nth-child(1) {
+                        span {
+                            background-color: darken($color-yellow, 15%);
+                        }
+                    }
+                    &:nth-child(2) {
+                        span {
+                            background-color: $color-orange;
+                        }
+                    }
+                    &:nth-child(3) {
+                        span {
+                            background-color: $color-pink;
+                        }
+                    }
+                    &:after {
+                        content: '|';
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                    &:last-child:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+        .profile-desc {
+            width: 60%;
+            margin: 0 auto;
+            p {
+                font-size: 1rem;
+                line-height: 1.5em;
+            }
+        }
+    }
+    #body-section {
+        background-image: url(../img/2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        color: $color-white;
+        #about-us {
+            .layer {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba($color-base, 0.8);
+            }
+            position: relative;
+            background-image: url(../img/2_2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            .about-section {
+                padding-left: 70px;
+                padding-right: 50px;
+                padding-top: 50px;
+                .section-title {
+                    margin-bottom: 50px;
+                }
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.25em;
+                }
+            }
+            .ourTeam-section {
+                padding-left: 50px;
+                padding-right: 70px;
+                padding-top: 50px;
+                .list-members {
+                    li {
+                        margin-bottom: 20px;
+                        .profile {
+                            display: table-row;
+                            img {
+                                display: table-cell;
+                            }
+                            .profile-title {
+                                display: table-cell;
+                                vertical-align: middle;
+                                padding-left: 20px;
+                                font-size: 1rem;
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #services {
+            position: relative;
+            background-image: url(../img/3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 30px;
+            color: #515151;
+            .section-title {
+                text-align: center;
+            }
+            .section-desc {
+                text-align: center;
+                width: 70%;
+                margin: 0 auto;
+                font-size: 1.15rem;
+            }
+        }
+    }
+}
+
+footer#contact-us {
+    position: relative;
+    display: block;
+    background: $color-base;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    .section-title {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-family: $montserrat;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 0px;
+        line-height: 1.5em;
+        color: darken($color-white, 10%);
+        span {
+            color: $color-yellow;
+            display: block;
+        }
+    }
+    .contact-us-section {
+        padding-top: 70px;
+        .form-section {
+            padding-left: 70px;
+            padding-right: 50px;
+            input.form-control {
+                background: rgba(3, 11, 19, 0.5);
+                border: 0px;
+                box-shadow: none;
+                margin-bottom: 10px;
+                padding: 10px 12px;
+                height: auto;
+                color: #ffffff;
+            }
+            .btn-submit {
+                padding: 6px 24px;
+                font-size: 0.85rem;
+                margin-top: 10px;
+            }
+        }
+        .details-section {
+            padding-left: 50px;
+            padding-right: 70px;
+            h3 {
+                color: $color-white;
+                font-family: $roboto;
+                text-transform: uppercase;
+                margin: 0px;
+                font-size: 1rem;
+                margin-bottom: 15px;
+                a {
+                    color: $color-white;
+                    text-decoration: none;
+                    text-transform: lowercase;
+                }
+            }
+        }
+    }
+    .siteBy {
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        font-size: 0.75rem;
+        color: #6f6f6f;
+        z-index: 99999999;
+    }
+}

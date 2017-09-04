@@ -1,0 +1,469 @@
+/* All common stylesheet codes should come here */
+/* All global and reusable variables */
+.twitter {
+  background-color: #00aced !important; }
+
+.twitter-text {
+  color: #00aced !important; }
+
+.facebook {
+  background-color: #3b5998 !important; }
+
+.facebook-text {
+  color: #3b5998 !important; }
+
+.googleplus {
+  background-color: #dd4b39 !important; }
+
+.googleplus-text {
+  color: #dd4b39 !important; }
+
+.pinterest {
+  background-color: #cb2027 !important; }
+
+.pinterest-text {
+  color: #cb2027 !important; }
+
+.linkedin {
+  background-color: #007bb6 !important; }
+
+.linkedin-text {
+  color: #007bb6 !important; }
+
+.youtube {
+  background-color: #bb0000 !important; }
+
+.youtube-text {
+  color: #bb0000 !important; }
+
+.vimeo {
+  background-color: #1ab7ea !important; }
+
+.vimeo-text {
+  color: #1ab7ea !important; }
+
+.tumblr {
+  background-color: #32506d !important; }
+
+.tumblr-text {
+  color: #32506d !important; }
+
+.instagram {
+  background-color: #bc2a8d !important; }
+
+.instagram-text {
+  color: #bc2a8d !important; }
+
+.flickr {
+  background-color: #ff0084 !important; }
+
+.flickr-text {
+  color: #ff0084 !important; }
+
+.dribbble {
+  background-color: #ea4c89 !important; }
+
+.dribbble-text {
+  color: #ea4c89 !important; }
+
+.quora {
+  background-color: #a82400 !important; }
+
+.quora-text {
+  color: #a82400 !important; }
+
+.foursquare {
+  background-color: #0072b1 !important; }
+
+.foursquare-text {
+  color: #0072b1 !important; }
+
+.wordpress {
+  background-color: #21759b !important; }
+
+.wordpress-text {
+  color: #21759b !important; }
+
+.stumbleupon {
+  background-color: #EB4823 !important; }
+
+.stumbleupon-text {
+  color: #EB4823 !important; }
+
+.yahoo {
+  background-color: #7B0099 !important; }
+
+.yahoo-text {
+  color: #7B0099 !important; }
+
+.blogger {
+  background-color: #fb8f3d !important; }
+
+.blogger-text {
+  color: #fb8f3d !important; }
+
+.soundcloud {
+  background-color: #ff3a00 !important; }
+
+.soundcloud-text {
+  color: #ff3a00 !important; }
+
+.raleway {
+  font-family: "Raleway", sans-serif !important; }
+
+.montserrat {
+  font-family: "Montserrat", sans-serif !important; }
+
+.roboto {
+  font-family: "Roboto", sans-serif !important; }
+
+.font-awesome {
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* All possible reusable mixins */
+/* All global declaration for css should come here */
+html {
+  font-size: 13px; }
+
+body {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.25; }
+
+@media (min-width: 768px) {
+  html {
+    font-size: 15px; } }
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 12px;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  border: 4px solid rgba(255, 255, 255, 0);
+  background-clip: content-box;
+  background-color: #272727;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #414141; }
+
+::-webkit-scrollbar-corner {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.animated.delay-05s {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.animated.delay-15s {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+.animated.delay-2s {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s; }
+
+.animated.delay-25s {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
+
+.animated.delay-3s {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s; }
+
+.animated.delay-35s {
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+
+.animated.delay-4s {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s; }
+
+.animated.delay-45s {
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  animation-delay: 4.5s; }
+
+.animated.delay-5s {
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  animation-delay: 5; }
+
+.animated.delay-55s {
+  -webkit-animation-delay: 5.5s;
+  -moz-animation-delay: 5.5s;
+  animation-delay: 5.5s; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 9999;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  header .navbar-main .navbar-collapse {
+    padding: 0px; }
+    header .navbar-main .navbar-collapse .navbar-nav {
+      width: 100%;
+      text-align: center; }
+      header .navbar-main .navbar-collapse .navbar-nav li {
+        float: none;
+        display: inline-block;
+        width: 19%; }
+        header .navbar-main .navbar-collapse .navbar-nav li a {
+          text-transform: uppercase;
+          color: #ffffff; }
+          header .navbar-main .navbar-collapse .navbar-nav li a:hover, header .navbar-main .navbar-collapse .navbar-nav li a:focus {
+            background: transparent; }
+          header .navbar-main .navbar-collapse .navbar-nav li a.logo img {
+            width: 70px; }
+
+main .color-highlight {
+  color: #ffeb3b; }
+main .section-after {
+  overflow: hidden;
+  padding-bottom: 100px !important; }
+  main .section-after:after {
+    content: '';
+    height: 100px;
+    width: 100px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -50px;
+    left: 48%; }
+  main .section-after#about-us:after {
+    background: #C1C1C1; }
+  main .section-after#services:after {
+    background: #13212E; }
+main .section-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  main .section-title span {
+    color: #ffeb3b; }
+main .profile {
+  position: relative;
+  top: -65px; }
+  main .profile img {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%; }
+  main .profile .profile-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px; }
+    main .profile .profile-title span {
+      color: #ffeb3b; }
+  main .profile.main img {
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+    border: 2px solid #ffeb3b; }
+main #hero-section {
+  background-image: url(../img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff; }
+  main #hero-section .layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 33, 46, 0.8);
+    padding-bottom: 50px; }
+  main #hero-section .profile-brief {
+    margin-bottom: 30px; }
+    main #hero-section .profile-brief p {
+      font-family: "Raleway", sans-serif;
+      font-weight: normal;
+      margin-bottom: 0px; }
+    main #hero-section .profile-brief h3 {
+      margin-top: 0px;
+      font-family: "Raleway", sans-serif;
+      font-size: 1.1rem;
+      font-weight: normal; }
+    main #hero-section .profile-brief ul li {
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      font-weight: 900;
+      letter-spacing: 1px; }
+      main #hero-section .profile-brief ul li span {
+        display: inline-block;
+        padding: 0px 3px;
+        margin-right: 2px; }
+      main #hero-section .profile-brief ul li:nth-child(1) span {
+        background-color: #eed500; }
+      main #hero-section .profile-brief ul li:nth-child(2) span {
+        background-color: #ff9800; }
+      main #hero-section .profile-brief ul li:nth-child(3) span {
+        background-color: #e91e63; }
+      main #hero-section .profile-brief ul li:after {
+        content: '|';
+        margin-left: 5px;
+        margin-right: 5px; }
+      main #hero-section .profile-brief ul li:last-child:after {
+        content: ''; }
+  main #hero-section .profile-desc {
+    width: 60%;
+    margin: 0 auto; }
+    main #hero-section .profile-desc p {
+      font-size: 1rem;
+      line-height: 1.5em; }
+main #body-section {
+  background-image: url(../img/2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: #ffffff; }
+  main #body-section #about-us {
+    position: relative;
+    background-image: url(../img/2_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; }
+    main #body-section #about-us .layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(19, 33, 46, 0.8); }
+    main #body-section #about-us .about-section {
+      padding-left: 70px;
+      padding-right: 50px;
+      padding-top: 50px; }
+      main #body-section #about-us .about-section .section-title {
+        margin-bottom: 50px; }
+      main #body-section #about-us .about-section p {
+        font-size: 1.2rem;
+        line-height: 1.25em; }
+    main #body-section #about-us .ourTeam-section {
+      padding-left: 50px;
+      padding-right: 70px;
+      padding-top: 50px; }
+      main #body-section #about-us .ourTeam-section .list-members li {
+        margin-bottom: 20px; }
+        main #body-section #about-us .ourTeam-section .list-members li .profile {
+          display: table-row; }
+          main #body-section #about-us .ourTeam-section .list-members li .profile img {
+            display: table-cell; }
+          main #body-section #about-us .ourTeam-section .list-members li .profile .profile-title {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            font-size: 1rem;
+            font-weight: normal; }
+  main #body-section #services {
+    position: relative;
+    background-image: url(../img/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 30px;
+    color: #515151; }
+    main #body-section #services .section-title {
+      text-align: center; }
+    main #body-section #services .section-desc {
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+      font-size: 1.15rem; }
+
+footer#contact-us {
+  position: relative;
+  display: block;
+  background: #13212E;
+  padding-top: 60px;
+  padding-bottom: 120px; }
+  footer#contact-us .section-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    line-height: 1.5em;
+    color: #e6e6e6; }
+    footer#contact-us .section-title span {
+      color: #ffeb3b;
+      display: block; }
+  footer#contact-us .contact-us-section {
+    padding-top: 70px; }
+    footer#contact-us .contact-us-section .form-section {
+      padding-left: 70px;
+      padding-right: 50px; }
+      footer#contact-us .contact-us-section .form-section input.form-control {
+        background: rgba(3, 11, 19, 0.5);
+        border: 0px;
+        box-shadow: none;
+        margin-bottom: 10px;
+        padding: 10px 12px;
+        height: auto;
+        color: #ffffff; }
+      footer#contact-us .contact-us-section .form-section .btn-submit {
+        padding: 6px 24px;
+        font-size: 0.85rem;
+        margin-top: 10px; }
+    footer#contact-us .contact-us-section .details-section {
+      padding-left: 50px;
+      padding-right: 70px; }
+      footer#contact-us .contact-us-section .details-section h3 {
+        color: #ffffff;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        margin: 0px;
+        font-size: 1rem;
+        margin-bottom: 15px; }
+        footer#contact-us .contact-us-section .details-section h3 a {
+          color: #ffffff;
+          text-decoration: none;
+          text-transform: lowercase; }
+  footer#contact-us .siteBy {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    font-size: 0.75rem;
+    color: #6f6f6f;
+    z-index: 99999999; }
+
+/*# sourceMappingURL=style.css.map */
