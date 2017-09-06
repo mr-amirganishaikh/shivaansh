@@ -117,13 +117,14 @@
 .roboto {
   font-family: "Roboto", sans-serif !important; }
 
-.font-awesome {
+.font-awesome, main #body-section #services .section-accordion .panel .panel-heading h4 a:after {
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 /* All possible reusable mixins */
+/*Responsiveness mixins*/
 /* All global declaration for css should come here */
 html {
   font-size: 13px; }
@@ -134,7 +135,7 @@ body {
 
 p {
   font-size: 1rem;
-  line-height: 1.25; }
+  line-height: 1.25em; }
 
 @media (min-width: 768px) {
   html {
@@ -216,6 +217,28 @@ p {
   -moz-animation-delay: 5.5s;
   animation-delay: 5.5s; }
 
+.goToTop {
+  position: fixed;
+  right: -30%;
+  bottom: 15%;
+  z-index: 999;
+  background: #c1c1c1;
+  color: #544b4b;
+  padding: 10px 12px;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px -1px #1f1f1f;
+  cursor: pointer;
+  -webkit-transition: all 0.45s;
+  -moz-transition: all 0.45s;
+  -ms-transition: all 0.45s;
+  -o-transition: all 0.45s;
+  transition: all 0.45s; }
+  .goToTop.active {
+    right: 15px; }
+
 header {
   position: absolute;
   top: 0;
@@ -228,22 +251,53 @@ header {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
+  @media (max-width: 767px) {
+    header .navbar-main .navbar-header {
+      background: #13212E; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    header .navbar-main .navbar-header {
+      display: none; } }
+  header .navbar-main .navbar-header .navbar-toggle {
+    margin-bottom: 5px; }
+    header .navbar-main .navbar-header .navbar-toggle i {
+      color: #ffffff;
+      font-size: 2rem; }
+  header .navbar-main .navbar-header .navbar-brand {
+    padding: 5px 15px;
+    height: 60px; }
+    header .navbar-main .navbar-header .navbar-brand a {
+      display: block; }
+      header .navbar-main .navbar-header .navbar-brand a img {
+        height: 50px; }
   header .navbar-main .navbar-collapse {
     padding: 0px; }
     header .navbar-main .navbar-collapse .navbar-nav {
       width: 100%;
       text-align: center; }
-      header .navbar-main .navbar-collapse .navbar-nav li {
-        float: none;
-        display: inline-block;
-        width: 19%; }
-        header .navbar-main .navbar-collapse .navbar-nav li a {
-          text-transform: uppercase;
-          color: #ffffff; }
-          header .navbar-main .navbar-collapse .navbar-nav li a:hover, header .navbar-main .navbar-collapse .navbar-nav li a:focus {
-            background: transparent; }
-          header .navbar-main .navbar-collapse .navbar-nav li a.logo img {
-            width: 70px; }
+      @media (max-width: 767px) {
+        header .navbar-main .navbar-collapse .navbar-nav {
+          margin: 0px;
+          text-align: left; } }
+      @media (min-width: 768px) {
+        header .navbar-main .navbar-collapse .navbar-nav li {
+          float: none;
+          display: inline-block;
+          width: 19%; } }
+      header .navbar-main .navbar-collapse .navbar-nav li a {
+        text-transform: uppercase;
+        color: #ffffff; }
+        @media (max-width: 767px) {
+          header .navbar-main .navbar-collapse .navbar-nav li a {
+            background: #13212E; } }
+        header .navbar-main .navbar-collapse .navbar-nav li a.exceptional {
+          text-transform: none; }
+        header .navbar-main .navbar-collapse .navbar-nav li a:hover, header .navbar-main .navbar-collapse .navbar-nav li a:focus {
+          background: transparent; }
+          @media (max-width: 767px) {
+            header .navbar-main .navbar-collapse .navbar-nav li a:hover, header .navbar-main .navbar-collapse .navbar-nav li a:focus {
+              background: #eed500; } }
+        header .navbar-main .navbar-collapse .navbar-nav li a.logo img {
+          width: 70px; }
 
 main .color-highlight {
   color: #ffeb3b; }
@@ -261,7 +315,7 @@ main .section-after {
     border-radius: 100%;
     position: absolute;
     bottom: -50px;
-    left: 48%; }
+    left: calc(50% - 50px); }
   main .section-after#about-us:after {
     background: #C1C1C1; }
   main .section-after#services:after {
@@ -277,8 +331,7 @@ main .section-title {
   main .section-title span {
     color: #ffeb3b; }
 main .profile {
-  position: relative;
-  top: -65px; }
+  position: relative; }
   main .profile img {
     width: 100px;
     height: 100px;
@@ -295,17 +348,25 @@ main .profile {
     letter-spacing: 1px; }
     main .profile .profile-title span {
       color: #ffeb3b; }
-  main .profile.main img {
-    width: 120px;
-    height: 120px;
-    padding: 2px;
-    border: 2px solid #ffeb3b; }
+  main .profile.main {
+    top: -65px; }
+    main .profile.main .profile-title {
+      margin-bottom: 0px; }
+    main .profile.main img {
+      width: 120px;
+      height: 120px;
+      padding: 2px;
+      border: 2px solid #ffeb3b; }
 main #hero-section {
   background-image: url(../img/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   color: #ffffff; }
+  @media (max-width: 767px) {
+    main #hero-section .container:nth-child(2) {
+      width: 95%;
+      margin: 0 auto; } }
   main #hero-section .layer {
     width: 100%;
     height: 100%;
@@ -346,6 +407,9 @@ main #hero-section {
   main #hero-section .profile-desc {
     width: 60%;
     margin: 0 auto; }
+    @media (max-width: 767px) {
+      main #hero-section .profile-desc {
+        width: 80%; } }
     main #hero-section .profile-desc p {
       font-size: 1rem;
       line-height: 1.5em; }
@@ -361,6 +425,10 @@ main #body-section {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center; }
+    @media (max-width: 767px) {
+      main #body-section #about-us {
+        width: 95%;
+        margin: 0 auto; } }
     main #body-section #about-us .layer {
       position: absolute;
       width: 100%;
@@ -372,17 +440,37 @@ main #body-section {
       padding-left: 70px;
       padding-right: 50px;
       padding-top: 50px; }
+      @media (max-width: 767px) {
+        main #body-section #about-us .about-section {
+          padding: 30px; } }
       main #body-section #about-us .about-section .section-title {
         margin-bottom: 50px; }
+        @media (max-width: 1023px) {
+          main #body-section #about-us .about-section .section-title {
+            text-align: center; } }
       main #body-section #about-us .about-section p {
         font-size: 1.2rem;
         line-height: 1.25em; }
+        @media (max-width: 1023px) {
+          main #body-section #about-us .about-section p {
+            text-align: left; } }
     main #body-section #about-us .ourTeam-section {
       padding-left: 50px;
       padding-right: 70px;
       padding-top: 50px; }
+      @media (max-width: 767px) {
+        main #body-section #about-us .ourTeam-section {
+          padding: 30px; } }
+      @media (max-width: 1023px) {
+        main #body-section #about-us .ourTeam-section .section-title {
+          text-align: center; } }
       main #body-section #about-us .ourTeam-section .list-members li {
         margin-bottom: 20px; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          main #body-section #about-us .ourTeam-section .list-members li {
+            width: 50%;
+            float: left;
+            display: inline-block; } }
         main #body-section #about-us .ourTeam-section .list-members li .profile {
           display: table-row; }
           main #body-section #about-us .ourTeam-section .list-members li .profile img {
@@ -401,13 +489,72 @@ main #body-section {
     background-position: center center;
     padding: 30px;
     color: #515151; }
+    @media (max-width: 767px) {
+      main #body-section #services {
+        width: 95%;
+        margin: 0 auto; } }
+    main #body-section #services:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(193, 193, 193, 0.45);
+      height: 100%;
+      width: 100%; }
     main #body-section #services .section-title {
-      text-align: center; }
+      text-align: center;
+      position: relative; }
     main #body-section #services .section-desc {
       text-align: center;
       width: 70%;
+      margin: 0 auto 30px;
+      font-size: 1.15rem;
+      position: relative; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        main #body-section #services .section-desc {
+          width: 80%; } }
+      @media (max-width: 767px) {
+        main #body-section #services .section-desc {
+          width: 90%; } }
+    main #body-section #services .section-accordion {
+      width: 70%;
       margin: 0 auto;
-      font-size: 1.15rem; }
+      padding: 0px 20px;
+      position: relative; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        main #body-section #services .section-accordion {
+          width: 80%; } }
+      @media (max-width: 767px) {
+        main #body-section #services .section-accordion {
+          width: 100%;
+          padding: 0px; } }
+      main #body-section #services .section-accordion .panel {
+        background: transparent;
+        border: 0px;
+        box-shadow: none;
+        margin-bottom: 15px; }
+        main #body-section #services .section-accordion .panel .panel-heading {
+          background: transparent;
+          border: 0px;
+          padding: 0px; }
+          main #body-section #services .section-accordion .panel .panel-heading h4 a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #544b4b; }
+            main #body-section #services .section-accordion .panel .panel-heading h4 a:after {
+              font-size: 1rem;
+              margin-left: 1em; }
+            main #body-section #services .section-accordion .panel .panel-heading h4 a[aria-expanded="true"]:after {
+              content: '\f056'; }
+            main #body-section #services .section-accordion .panel .panel-heading h4 a.collapsed {
+              color: #827373; }
+        main #body-section #services .section-accordion .panel .panel-body {
+          border: 0px;
+          color: #544b4b; }
+          main #body-section #services .section-accordion .panel .panel-body p {
+            font-size: 1rem;
+            line-height: 1.5em; }
 
 footer#contact-us {
   position: relative;
@@ -415,6 +562,9 @@ footer#contact-us {
   background: #13212E;
   padding-top: 60px;
   padding-bottom: 120px; }
+  @media (max-width: 1023px) {
+    footer#contact-us {
+      padding-bottom: 60px; } }
   footer#contact-us .section-title {
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -432,6 +582,10 @@ footer#contact-us {
     footer#contact-us .contact-us-section .form-section {
       padding-left: 70px;
       padding-right: 50px; }
+      @media (max-width: 1023px) {
+        footer#contact-us .contact-us-section .form-section {
+          padding-left: 30px;
+          padding-right: 30px; } }
       footer#contact-us .contact-us-section .form-section input.form-control {
         background: rgba(3, 11, 19, 0.5);
         border: 0px;
@@ -447,6 +601,13 @@ footer#contact-us {
     footer#contact-us .contact-us-section .details-section {
       padding-left: 50px;
       padding-right: 70px; }
+      @media (max-width: 1023px) {
+        footer#contact-us .contact-us-section .details-section {
+          padding-left: 30px;
+          padding-right: 30px; } }
+      @media (max-width: 767px) {
+        footer#contact-us .contact-us-section .details-section {
+          margin-top: 40px; } }
       footer#contact-us .contact-us-section .details-section h3 {
         color: #ffffff;
         font-family: "Roboto", sans-serif;
@@ -454,6 +615,11 @@ footer#contact-us {
         margin: 0px;
         font-size: 1rem;
         margin-bottom: 15px; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          footer#contact-us .contact-us-section .details-section h3.mobile {
+            float: left;
+            display: inline-block;
+            margin-right: 15px; } }
         footer#contact-us .contact-us-section .details-section h3 a {
           color: #ffffff;
           text-decoration: none;
