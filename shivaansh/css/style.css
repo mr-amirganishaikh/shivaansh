@@ -322,14 +322,19 @@ main .section-after {
     content: '';
     height: 100px;
     width: 100px;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    position: absolute;
-    bottom: -50px;
-    left: calc(50% - 50px); }
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
   main .section-after#about-us:after {
     background: #C1C1C1;
     box-shadow: 0px -4px 8px 1px #171716; }

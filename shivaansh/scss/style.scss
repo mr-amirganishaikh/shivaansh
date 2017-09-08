@@ -122,10 +122,11 @@ main {
             content: '';
             height: 100px;
             width: 100px;
-            @include border-radius(100%);
             position: absolute;
             bottom: -50px;
-            left: calc(50% - 50px);
+            left: 50%;
+            @include border-radius(100%);
+            @include transform(translateX(-50%));
         }
         &#about-us:after {
             background: #C1C1C1;
