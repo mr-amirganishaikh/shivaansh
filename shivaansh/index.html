@@ -51,6 +51,9 @@
                     <div class="profile main text-center">
                         <img src="img/sachin.jpg" />
                         <h2 class="profile-title"><span>Sachin</span> D. Kesarkar</h2>
+                        <a class="profile-link" href="http://www.imdb.com/name/nm5069928/">
+                            <img src="img/IMDb-icon.png" title="IMDb Profile of Sachin D. Kesarkar" alt="IMDb Profile of Sachin D. Kesarkar" />
+                        </a>
                     </div>
                     <div class="profile-brief text-center">
                         <p>Introducing</p>
@@ -231,6 +234,11 @@
                 scrollTop: 0
             }, 1000);
         });
+        
+        listClassToggle({
+            target: '.navbar-nav',
+            class: 'active'
+        });
     });
 
     $(window).resize(function() {
@@ -239,13 +247,18 @@
 
     $(window).scroll(function() {
         goToTop();
+
+        fixScrollNav({
+            target: 'header',
+            offset: '0'
+        });
     });
     /* End of Call all the necessary functions */
 
     /** Start of Custom Functions Declaration **/
     /* Start of Add top gap */
     var addTopGap = function() {
-        var topGap = $('header').outerHeight() + 60;
+        var topGap = 2 * ($('header').outerHeight());
         $('#hero-section').find('.gap').css({
             'height': topGap
         });
@@ -282,16 +295,54 @@
                 scrollTop: $(scrollDiv).offset().top - offsetHeight
             }, delay);
         });
-    };
+    }
     /* End of Smooth Scroll */
 
+    /* Start of GOTOTOP function */
     var goToTop = function() {
-        if (($(window).scrollTop() > 100) && ($(window).width() > 760)) {
+        if (($(window).scrollTop() > 100)) {
             $('.goToTop').addClass('active');
         } else {
             $('.goToTop').removeClass('active');
         }
     }
+    /* End of GOTOTOP function */
+
+    /* Start of Add/remove class on scroll */
+    var fixScrollNav = function(options) {
+        // Target declaration
+        var target = options.target;
+
+        // offset and offsetHeight declaration
+        var offset = options.offset;
+        var offsetHeight = 0;
+        if (isNaN(offset)) {
+            offsetHeight = $(offset).outerHeight();
+        } else {
+            offsetHeight = offset;
+        }
+
+        if ($(window).scrollTop() > offsetHeight) {
+            $(target).addClass("active");
+        } else {
+            $(target).removeClass("active");
+        }
+    }
+    /* End of Add/remove class on scroll */
+
+    /* Start of Class list toggle function */
+    var listClassToggle = function(options) {
+        // Target declaration
+        var target = options.target;
+        // Class name declaration
+        var className = options.class;
+
+        $(target).find('a').click(function() {
+            $(target).find('li').removeClass(className);
+            $(this).closest('li').addClass(className);
+        });
+    }
+    /* End of Class list toggle function */
 
     /** End of Custom Functions Declaration **/
 

@@ -6,13 +6,13 @@
     right: -30%;
     bottom: 15%;
     z-index: 999;
-    background: #c1c1c1;
-    color: darken(#8a7b7b, 20%);
-    padding: 10px 12px;
+    background: $color-yellow;
+    color: $color-base;
+    padding: 8px 13px;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    border-radius: 3px;
+    @include border-radius(100%);
     box-shadow: 0px 0px 15px -1px #1f1f1f;
     cursor: pointer;
     @include transition(all 0.45s);
@@ -22,14 +22,20 @@
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: transparent;
     z-index: 9999;
     @include transition(all 0.3s);
+    &.active {
+        background-color: rgba($color-base, 0.8);
+        box-shadow: 0px 0px 15px -1px #1f1f1f;
+    }
     .navbar-main {
+        margin: 0px;
+        border: 0px;
         .navbar-header {
             @include sm-down {
                 background: $color-base;
@@ -70,9 +76,18 @@ header {
                         display: inline-block;
                         width: 19%;
                     }
+                    &.active {
+                        a {
+                            color: $color-yellow;
+                        }
+                    }
                     a {
                         text-transform: uppercase;
                         color: $color-white;
+                        @include sm-up {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
                         @include sm-down {
                             background: $color-base;
                         }
@@ -82,9 +97,7 @@ header {
                         &:hover,
                         &:focus {
                             background: transparent;
-                            @include sm-down {
-                                background: darken($color-yellow, 15%);
-                            }
+                            color: $color-yellow;
                         }
                         &.logo {
                             img {
@@ -116,9 +129,11 @@ main {
         }
         &#about-us:after {
             background: #C1C1C1;
+            box-shadow: 0px -4px 8px 1px darken(#1F1F1E, 3%);
         }
         &#services:after {
             background: $color-base;
+            box-shadow: 0px -4px 8px 1px darken(#9e9292, 3%);
         }
     }
     .section-title {
@@ -154,6 +169,16 @@ main {
             top: -65px;
             .profile-title {
                 margin-bottom: 0px;
+            }
+            .profile-link {
+                img {
+                    width: 100px;
+                    height: auto;
+                    border: 0px;
+                    border-radius: 0px;
+                    padding: 0px;
+                    margin-top: 1rem;
+                }
             }
             img {
                 width: 120px;
@@ -270,9 +295,9 @@ main {
             .about-section {
                 padding-left: 70px;
                 padding-right: 50px;
-                padding-top: 50px;
+                padding-top: 70px;
                 @include sm-down {
-                    padding: 30px;
+                    padding: 40px 30px 30px;
                 }
                 .section-title {
                     margin-bottom: 50px;
@@ -291,9 +316,9 @@ main {
             .ourTeam-section {
                 padding-left: 50px;
                 padding-right: 70px;
-                padding-top: 50px;
+                padding-top: 70px;
                 @include sm-down {
-                    padding: 30px;
+                    padding: 40px 30px 30px;
                 }
                 .section-title {
                     @include md-down {
@@ -331,11 +356,12 @@ main {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
-            padding: 30px;
+            padding: 70px 30px 30px;
             color: #515151;
             @include sm-down {
                 width: 95%;
                 margin: 0 auto;
+                padding: 40px 30px 30px;
             }
             &:before {
                 content: '';
@@ -499,9 +525,9 @@ footer#contact-us {
     }
     .siteBy {
         position: absolute;
-        right: 5px;
+        right: 15px;
         bottom: 0;
-        font-size: 0.75rem;
+        font-size: 1rem;
         color: #6f6f6f;
         z-index: 99999999;
     }
